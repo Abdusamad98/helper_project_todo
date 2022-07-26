@@ -1,11 +1,4 @@
-const String tableName = "cached_todos";
-
-// required this.categoryId,
-// required this.dateTime,
-// required this.isDone,
-// required this.todoDescription,
-// required this.todoTitle,
-// required this.urgentLevel,
+const String todoTable = "cached_todos";
 
 class CachedTodoFields {
   static const String id = "_id";
@@ -54,6 +47,8 @@ class CachedTodo {
         todoDescription: todoDescription ?? this.todoDescription,
         urgentLevel: urgentLevel ?? this.urgentLevel,
       );
+
+
 
   static CachedTodo fromJson(Map<String, Object?> json) => CachedTodo(
         id: json[CachedTodoFields.id] as int?,
